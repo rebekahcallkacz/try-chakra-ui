@@ -22,3 +22,6 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ## Notes About Chakra UI
 
 - v2 is only compatible w/ React 18^ but seems like a pretty straightforward upgrade: https://chakra-ui.com/getting-started/migration
+- have a lot of components which are really just preset styles - are going to have to decide if we want to truly leverage all of this or rip it off ourselves
+- can very easily create custom icons
+- no problem w/ types so far

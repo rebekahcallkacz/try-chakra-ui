@@ -6,9 +6,14 @@ import {
   CardBody,
   CardFooter,
   Heading,
+  HStack,
+  Tag,
+  TagLabel,
+  TagRightIcon,
   Text,
+  Tooltip,
 } from "@chakra-ui/react";
-import { InfoIcon } from "@chakra-ui/icons";
+import { InfoIcon, SettingsIcon } from "@chakra-ui/icons";
 
 import { IPerson } from "./_types";
 
@@ -23,7 +28,15 @@ const PersonCard = ({ personData }: TPersonCardProps) => {
         <Text>{`Gender: ${personData.gender}`}</Text>
       </CardBody>
       <CardFooter>
-        <IconButton icon={<InfoIcon />} aria-label="More Info" />
+        <HStack>
+          <Tooltip label="Home Planet Info">
+            <IconButton icon={<InfoIcon />} aria-label="More Info" />
+          </Tooltip>
+          <Tag size={"md"}>
+            <TagLabel>Links</TagLabel>
+            <TagRightIcon as={SettingsIcon} />
+          </Tag>
+        </HStack>
       </CardFooter>
     </Card>
   );
