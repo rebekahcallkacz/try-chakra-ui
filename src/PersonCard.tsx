@@ -10,22 +10,22 @@ import {
   Tag,
   TagLabel,
   TagRightIcon,
-  Text,
   Tooltip,
 } from "@chakra-ui/react";
 import { InfoIcon, SettingsIcon } from "@chakra-ui/icons";
 
 import { IPerson } from "./_types";
+import PersonDataTable from "./PersonDataTable";
 
 type TPersonCardProps = { personData: IPerson };
 const PersonCard = ({ personData }: TPersonCardProps) => {
   return (
-    <Card variant="filled" size="md" margin="5px" width="200px" align="center">
+    <Card variant="filled" size="md" margin="5px" width="210px" align="center">
       <CardHeader>
         <Heading size="sm">{personData.name}</Heading>
       </CardHeader>
       <CardBody>
-        <Text>{`Gender: ${personData.gender}`}</Text>
+        <PersonDataTable person={personData} />
       </CardBody>
       <CardFooter>
         <HStack>
